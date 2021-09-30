@@ -24,6 +24,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * we will run our own copy of the automated tests. If you change this file,
  * then you will introduce a change of specification!!!
  *
+ * Be aware that those tests will be ignored as long as the other classes will
+ * not be completed (such as FileExplorer, FileTransformer, etc.), and this
+ * even if the code of Application is correct.
+ *
  * @author Olivier Liechti, Miguel Santamaria
  */
 public class ApplicationTest {
