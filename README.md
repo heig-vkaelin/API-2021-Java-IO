@@ -34,10 +34,11 @@ If your application is fully implemented you should have the following result on
 
 
 ```
+$ mvn clean package
 [INFO] Scanning for projects...
 [INFO]
-[INFO] --------------------< ch.heigvd.res.io:lab-java-io >--------------------
-[INFO] Building RES Lab Java IO 1.0-SNAPSHOT
+[INFO] --------------------< ch.heigvd.api.io:lab-java-io >--------------------
+[INFO] Building API Lab Java IO 1.0-SNAPSHOT
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO]
 [INFO] ...... Omitting some output
@@ -49,7 +50,7 @@ If your application is fully implemented you should have the following result on
 [INFO]
 [INFO] Results:
 [INFO]
-[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
 [INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
