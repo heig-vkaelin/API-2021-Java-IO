@@ -1,7 +1,7 @@
 # API-2021-Java-IO
 
 
-![image](./diagrams/chuck.png)
+![chuck-norris](./diagrams/chuck.png)
 
 Note: the default branch of this repository is named `main` and not `master`, which is the new name recently introduced by GitHub (read why [here](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main)).
 
@@ -149,6 +149,14 @@ For this lab, we will try the following workflow:
 Push commits as often as possible (whenever you make progress, turn a test green, etc.).
 
 Once you created your PR, an automatic process will be triggered in it each time you push new code in your branch (in software development we call that a _CI_, a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) process). This process will automatically run all the tests with a `mvn clean test` command (in a private Linux environment hosted by GitHub) and will fail if one of the test did not pass. This will help us to validate your laboratories, and this will also help you to have an automatic feedback on your work.
+
+Whenever you push your code, you will see the automatic checks process triggered in the main tab of your PR as follows:
+
+![GitHub Actions checks](./diagrams/github-actions-checks.png)
+
+After a few seconds it will turn red if some tests failed or green if all tests passed. If you want to have more details about the failure just click on the "Details" button to see the reason, for example:
+
+![GitHub Actions failed](./diagrams/github-actions-failed.png)
 
 Final note: because you all work in the same packages, we will not merge (more than one) PR at the end of the lab. But we will be able to get your branches and evaluate them.
 
