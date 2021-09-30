@@ -148,7 +148,7 @@ For this lab, we will try the following workflow:
 
 Push commits as often as possible (whenever you make progress, turn a test green, etc.).
 
-Once you created your PR, an automatic process will be triggered in it each time you push new code in your branch (in software development we call that a _CI_, a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) process). This process will automatically run all the tests with a `mvn clean test` command (in a private Linux environment hosted by GitHub) and will fail if one of the test did not pass. This will help us to validate your laboratories, and this will also help you to have an automatic feedback on your work.
+Once you created your PR, an automatic process will be triggered in it each time you push new code in your branch (in software development we call that a _CI_, a [Continuous Integration](https://www.atlassian.com/continuous-delivery/continuous-integration) process). This process will automatically run all the tests with a `mvn clean test` command (in a private Linux environment hosted by GitHub) and will fail if one of the test did not pass. This will help us to validate your laboratories, and this will also help you to have an automatic feedback on your work.
 
 Whenever you push your code, you will see the automatic checks process triggered in the main tab of your PR as follows:
 
