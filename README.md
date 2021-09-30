@@ -1,26 +1,8 @@
 # API-2021-Java-IO
 
-**Warning: do NOT change the code in the test packages**
-
-## How many branches should I create? How many PRs? When?
-
-For this lab, we will try the following workflow:
-* create a branch for the entire lab (you call it "dev", "lab" or whatever you want)
-* commit code as soon as possible and push the branch to your fork
-* open a PR. In the name of the PR, start with `[WIP] `. This makes it easy for us to see that you are still working on the lab (Work In Progress) 
-* even if tests are still red, we have a communication space while you work on the lab
-* whenever you push a new commit, we will be able to see it (and possibly to comment it)
-* at some point, all your tests will be green: you can then signal that you are done; for that, change the name of your PR. Replace `[WIP] ` with `[TOREVIEW] `.
-
-Push commits as often as possible (whenever you make progress, turn a test green, etc.).
-
-If you want to use private branches, you can do so. But then, don't create individual PRs.
-
-Final note: because you all work in the same packages, we will not merge (more than one) PR at the end of the lab. But we will be able to get your branches and evaluate them.
-
+**Warning: do NOT change the code in the test packages!**
 
 ![image](./diagrams/chuck.png)
-
 
 ## Introduction
 
@@ -147,6 +129,21 @@ $ find ./workspace/
 
 You can then compare `quote-8.utf8.out` with `quote-8.utf8` to see the text received as input (from the web service) and the text produced as output (by your program).
 
+## How many branches should I create? How many PRs? When?
+
+For this lab, we will try the following workflow:
+* create a branch for the entire lab (you call it "dev", "lab" or whatever you want)
+* commit code as soon as possible and push the branch to your fork
+* open a PR. In the name of the PR, start with `[WIP] `. This makes it easy for us to see that you are still working on the lab (Work In Progress) 
+* even if tests are still red, we have a communication space while you work on the lab
+* whenever you push a new commit, we will be able to see it (and possibly to comment it)
+* at some point, all your tests will be green: you can then signal that you are done; for that, change the name of your PR. Replace `[WIP] ` with `[TOREVIEW] `.
+
+Push commits as often as possible (whenever you make progress, turn a test green, etc.).
+
+If you want to use private branches, you can do so. But then, don't create individual PRs.
+
+Final note: because you all work in the same packages, we will not merge (more than one) PR at the end of the lab. But we will be able to get your branches and evaluate them.
 
 ## Tasks
 
