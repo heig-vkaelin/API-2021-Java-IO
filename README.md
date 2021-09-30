@@ -138,12 +138,14 @@ You can then compare `quote-8.utf8.out` with `quote-8.utf8` to see the text rece
 For this lab, we will try the following workflow:
 * create a branch for the entire lab (you call it "dev", "lab" or whatever you want)
 * commit code as soon as possible and push the branch to your fork
-* open a PR. In the name of the PR, start with `[WIP] `. This makes it easy for us to see that you are still working on the lab (Work In Progress) 
+* open a PR (_Pull Request_). In the name of the PR, start with `[WIP] `. This makes it easy for us to see that you are still working on the lab (Work In Progress) 
 * even if tests are still red, we have a communication space while you work on the lab
 * whenever you push a new commit, we will be able to see it (and possibly to comment it)
 * at some point, all your tests will be green: you can then signal that you are done; for that, change the name of your PR. Replace `[WIP] ` with `[TOREVIEW] `.
 
 Push commits as often as possible (whenever you make progress, turn a test green, etc.).
+
+Once you created your PR, an automatic process will be triggered in it each time you push new code in your branch. This process will automatically run all the tests with a `mvn clean test` command (in a private Linux environment hosted by GitHub) and will fail if one of the test did not pass. This will help us to validate your laboratories, and this will also help you to have an automatic feedback on your work.
 
 If you want to use private branches, you can do so. But then, don't create individual PRs.
 
@@ -155,10 +157,10 @@ Here is the proposed list of tasks to achieve the objectives:
 
 1. Start by forking and cloning this repo (**mandatory!!**).
 2. Create your own branch, then switch to it.
-3. From the main project, do a `mvn clean install` and notice that the tests fail.
+3. From the main project, do a `mvn clean package` and notice that the tests fail.
 4. Spend some time to explore the package structure.
 5. Examine the automated tests in the test project and do a step-by-step implementation, until all tests are green. Here is a proposed order for fixing the broken tests:
-   - `ApplicationTest.java` (be aware that those tests will be ignored by Maven as long as the other ones will not be completed, and this even if the code of Application.java is correct)
+   - `ApplicationTest.java` (be aware that those tests will be ignored by Maven as long as the other ones won't be completed, and this even if the code of Application.java is correct)
    - `NoOpCharTransformerTest.java`
    - `UpperCaseCharTransformerTest.java`
    - `LineNumberingCharTransformerTest.java`
@@ -167,8 +169,8 @@ Here is the proposed list of tasks to achieve the objectives:
    - `FileTransformerTest.java`
    
    The changes to be made to all implementation files (*NOT THE TEST FILES*) are marked with a 'TODO' comment. Intellij should highlight the comment.
-5. Each time that you fix a failing test, `commit` your work (and use a **meaningful message**)
+5. Each time that you fix a failing test, `commit` your work (and use a **meaningful message**). Don't forget to create the pull request as soon as possible!
 6. When all the tests are green, invoke the application (`java -jar`) from the top-level directory. Inspect the content of the `workspace/quotes` directory and check that the output files are correct.
 7. When you are done, make sure that you have committed all your work and push your commits.
-8. To make a final validation, move to a fresh directory. Clone your fork. Do a `mvn clean install` and make sure that the tests are still green and that the app still produces the correct output.
-9. Submit a pull request.
+8. To make a final validation, move to a fresh directory. Clone your fork. Do a `mvn clean package` and make sure that the tests are still green and that the app still produces the correct output.
+9. Check your pull request before renaming it: we don't want to have useless files in it, and all the tests of the automatic check system we implemented must be green.
