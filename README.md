@@ -157,6 +157,7 @@ Here is the proposed list of tasks to achieve the objectives:
 3. From the main project, do a `mvn clean install` and notice that the tests fail.
 4. Spend some time to explore the package structure.
 5. Examine the automated tests in the test project and do a step-by-step implementation, until all tests are green. Here is a proposed order for fixing the broken tests:
+   - `ApplicationTest.java` (be aware that those tests will be ignored by Maven as long as the other ones will not be completed, and this even if the code of Application.java is correct)
    - `NoOpCharTransformerTest.java`
    - `UpperCaseCharTransformerTest.java`
    - `LineNumberingCharTransformerTest.java`
