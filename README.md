@@ -3,6 +3,7 @@
 
 ![image](./diagrams/chuck.png)
 
+Note: the default branch of this repository is named `main` and not `master`, which is the new name recently introduced by GitHub (read why [here](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main)).
 
 **Warning: do NOT change the code in the test packages!**
 
