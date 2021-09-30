@@ -1,8 +1,11 @@
 # API-2021-Java-IO
 
-**Warning: do NOT change the code in the test packages!**
 
 ![image](./diagrams/chuck.png)
+
+
+**Warning: do NOT change the code in the test packages!**
+
 
 ## Introduction
 
@@ -12,7 +15,7 @@ The objective of this lab is to get familiar with the Java IO APIs and to intera
 2. The application **uses a Web Service client** (which is provided to you) to fetch *n* **quotes** from the [Internet Chuck Norris Database](http://www.icndb.com/api/) online service.
 3. The application stores the content of each quote in a **text file** (utf-8), on the local filesystem. It uses the *tags* associated to each quote to create a hierarchical structure of directories.
 4. The application then **traverses the local file system** and applies a transformation to each visited quote file.
-5. The processing consists of 1) converting all characters to their **uppercase** value and 2) adding a **line number** at the beginning of each line and 3) converting all line endings to Unix-style line endings (only '\n').
+5. The processing consists of 1) converting all characters to their **uppercase** value, 2) adding a **line number** at the beginning of each line and 3) converting all line endings to Unix-style line endings (only '\n').
 
 For example: the file
 
