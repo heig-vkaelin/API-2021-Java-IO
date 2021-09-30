@@ -138,7 +138,7 @@ You can then compare `quote-8.utf8.out` with `quote-8.utf8` to see the text rece
 For this lab, we will try the following workflow:
 * create a branch for the entire lab (you call it "dev", "lab" or whatever you want)
 * commit code as soon as possible and push the branch to your fork
-* open a PR (_Pull Request_). In the name of the PR, start with `[WIP] `. This makes it easy for us to see that you are still working on the lab (Work In Progress) 
+* open a PR (_Pull Request_). In the name of the PR, start with `[WIP] ` (Work In Progress). This makes it easier for us to see that you are still working on the lab
 * even if tests are still red, we have a communication space while you work on the lab
 * whenever you push a new commit, we will be able to see it (and possibly to comment it)
 * at some point, all your tests will be green: you can then signal that you are done; for that, change the name of your PR. Replace `[WIP] ` with `[TOREVIEW] `.
