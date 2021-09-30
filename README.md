@@ -145,7 +145,7 @@ For this lab, we will try the following workflow:
 
 Push commits as often as possible (whenever you make progress, turn a test green, etc.).
 
-Once you created your PR, an automatic process will be triggered in it each time you push new code in your branch. This process will automatically run all the tests with a `mvn clean test` command (in a private Linux environment hosted by GitHub) and will fail if one of the test did not pass. This will help us to validate your laboratories, and this will also help you to have an automatic feedback on your work.
+Once you created your PR, an automatic process will be triggered in it each time you push new code in your branch (in software development we call that a _CI_, a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) process). This process will automatically run all the tests with a `mvn clean test` command (in a private Linux environment hosted by GitHub) and will fail if one of the test did not pass. This will help us to validate your laboratories, and this will also help you to have an automatic feedback on your work.
 
 If you want to use private branches, you can do so. But then, don't create individual PRs.
 
@@ -173,4 +173,4 @@ Here is the proposed list of tasks to achieve the objectives:
 6. When all the tests are green, invoke the application (`java -jar`) from the top-level directory. Inspect the content of the `workspace/quotes` directory and check that the output files are correct.
 7. When you are done, make sure that you have committed all your work and push your commits.
 8. To make a final validation, move to a fresh directory. Clone your fork. Do a `mvn clean package` and make sure that the tests are still green and that the app still produces the correct output.
-9. Check your pull request before renaming it: we don't want to have useless files in it, and all the tests of the automatic check system we implemented must be green.
+9. Check your pull request before renaming it: we don't want to have useless files in it, and all the tests of the automatic tests process we implemented must be green.
