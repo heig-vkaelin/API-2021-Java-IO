@@ -147,8 +147,6 @@ Push commits as often as possible (whenever you make progress, turn a test green
 
 Once you created your PR, an automatic process will be triggered in it each time you push new code in your branch (in software development we call that a _CI_, a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) process). This process will automatically run all the tests with a `mvn clean test` command (in a private Linux environment hosted by GitHub) and will fail if one of the test did not pass. This will help us to validate your laboratories, and this will also help you to have an automatic feedback on your work.
 
-If you want to use private branches, you can do so. But then, don't create individual PRs.
-
 Final note: because you all work in the same packages, we will not merge (more than one) PR at the end of the lab. But we will be able to get your branches and evaluate them.
 
 ## Tasks
