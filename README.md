@@ -51,7 +51,7 @@ $ mvn clean package
 [INFO]
 [INFO] Results:
 [INFO]
-[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0
 [INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
@@ -61,6 +61,8 @@ $ mvn clean package
 [INFO] ------------------------------------------------------------------------
 
 ```
+
+There must be **19** successfully run tests.
 
 ### B. When running the application
 
