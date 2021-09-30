@@ -163,7 +163,7 @@ Here is the proposed list of tasks to achieve the objectives:
    - `NoOpCharTransformerTest.java`
    - `UpperCaseCharTransformerTest.java`
    - `LineNumberingCharTransformerTest.java`
-   - `CombinedCharTransformerTest.java`
+   - `CombinedCharTransformerTest.java` (which simply validates everything you did in the other transformer classes)
    - `FileExplorerTest.java`
    - `FileTransformerTest.java`
    
