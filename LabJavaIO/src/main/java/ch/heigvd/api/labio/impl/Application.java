@@ -135,17 +135,8 @@ public class Application {
          *   Write the file with encoding UTF-8.
          */
         OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8);
-        try {
-            osw.write(quote.getQuote());
-//      osw.close();
-        } catch (IOException e) {
-            LOG.log(Level.SEVERE, "Could not store quote in file. {0}", e.getMessage());
-            e.printStackTrace();
-        } finally {
-            if (osw != null) {
-                osw.close();
-            }
-        }
+        osw.write(quote.getQuote());
+        osw.close();
     }
     
     public void processQuoteFiles() throws IOException {
