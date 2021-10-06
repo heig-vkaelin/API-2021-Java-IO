@@ -23,14 +23,14 @@ public class LineNumberingCharTransformer {
     private int lineNumber = 0;
     
     public String transform(String c) {
-        if (Objects.equals(c, "\r"))
+        if (c.equals("\r"))
             return "";
         
         String result = "";
         if (lineNumber == 0) {
             result += ++lineNumber + ". ";
         }
-        if (Objects.equals(c, "\n")) {
+        if (c.equals("\n")) {
             result += c + ++lineNumber + ". ";
         } else {
             result += c;
