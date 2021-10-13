@@ -26,16 +26,16 @@ public class LineNumberingCharTransformer {
         if (c.equals("\r"))
             return "";
         
-        String result = "";
+        StringBuilder result = new StringBuilder();
         if (lineNumber == 0) {
-            result += ++lineNumber + ". ";
+            result.append(++lineNumber).append(". ");
         }
         if (c.equals("\n")) {
-            result += c + ++lineNumber + ". ";
+            result.append(c).append(++lineNumber).append(". ");
         } else {
-            result += c;
+            result.append(c);
         }
         
-        return result;
+        return result.toString();
     }
 }
