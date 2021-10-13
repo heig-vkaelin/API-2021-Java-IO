@@ -30,10 +30,9 @@ public class LineNumberingCharTransformer {
         if (lineNumber == 0) {
             result.append(++lineNumber).append(". ");
         }
+        result.append(c);
         if (c.equals("\n")) {
-            result.append(c).append(++lineNumber).append(". ");
-        } else {
-            result.append(c);
+            result.append(++lineNumber).append(". ");
         }
         
         return result.toString();

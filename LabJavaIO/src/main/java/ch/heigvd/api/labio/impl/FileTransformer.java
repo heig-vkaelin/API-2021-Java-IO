@@ -33,24 +33,34 @@ public class FileTransformer {
         UpperCaseCharTransformer upperTransformer = new UpperCaseCharTransformer();
         LineNumberingCharTransformer lineNumberTransformer = new LineNumberingCharTransformer();
         
+        InputStreamReader isr = null;
+        OutputStreamWriter osw = null;
+        
         try {
-            InputStreamReader isr = new InputStreamReader(new FileInputStream(inputFile), StandardCharsets.UTF_8);
+            isr = new InputStreamReader(new FileInputStream(inputFile), StandardCharsets.UTF_8);
             
             File of = new File(inputFile.getParent(), inputFile.getName() + ".out");
-            OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(of), StandardCharsets.UTF_8);
+            osw = new OutputStreamWriter(new FileOutputStream(of), StandardCharsets.UTF_8);
             
-            int c = isr.read();
-            while (c != -1) {
+            int c;
+            while ((c = isr.read()) != -1) {
                 String s = Character.toString((char) c);
                 osw.write(lineNumberTransformer.transform(upperTransformer.transform(s)));
-                c = isr.read();
             }
-            osw.flush();
-            osw.close();
-            isr.close();
             
         } catch (Exception ex) {
             LOG.log(Level.SEVERE, "Error while reading, writing or transforming file.", ex);
+        } finally {
+            try {
+                if (isr != null) isr.close();
+            } catch (IOException ex) {
+                LOG.log(Level.SEVERE, ex.toString(), ex);
+            }
+            try {
+                if (osw != null) osw.close();
+            } catch (IOException ex) {
+                LOG.log(Level.SEVERE, ex.toString(), ex);
+            }
         }
     }
 }
