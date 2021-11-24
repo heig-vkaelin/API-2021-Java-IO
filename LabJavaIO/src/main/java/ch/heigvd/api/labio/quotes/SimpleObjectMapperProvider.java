@@ -8,33 +8,33 @@ import javax.ws.rs.ext.Provider;
 import java.util.logging.Logger;
 
 /**
- * This is a technical class, used to transform JSON payloads received in 
+ * This is a technical class, used to transform JSON payloads received in
  * HTTP responses into Java objects. You don't need to modify, nor to use
  * this file. It is used automatically when fetching quotes from a
  * web service.
- * 
+ *
  * @author Olivier Liechti
  */
 @Provider
 public class SimpleObjectMapperProvider implements ContextResolver<ObjectMapper> {
-
-  private static final Logger LOG = Logger.getLogger(SimpleObjectMapperProvider.class.getName());
-
-  final ObjectMapper defaultObjectMapper;
-
-  public SimpleObjectMapperProvider() {
-    defaultObjectMapper = createDefaultMapper();
-  }
-
-  @Override
-  public ObjectMapper getContext(Class<?> type) {
-    return defaultObjectMapper;
-  }
-
-  private static ObjectMapper createDefaultMapper() {
-    final ObjectMapper result = new ObjectMapper();
-    result.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-    return result;
-  }
-
+    
+    private static final Logger LOG = Logger.getLogger(SimpleObjectMapperProvider.class.getName());
+    
+    final ObjectMapper defaultObjectMapper;
+    
+    public SimpleObjectMapperProvider() {
+        defaultObjectMapper = createDefaultMapper();
+    }
+    
+    @Override
+    public ObjectMapper getContext(Class<?> type) {
+        return defaultObjectMapper;
+    }
+    
+    private static ObjectMapper createDefaultMapper() {
+        final ObjectMapper result = new ObjectMapper();
+        result.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+        return result;
+    }
+    
 }
